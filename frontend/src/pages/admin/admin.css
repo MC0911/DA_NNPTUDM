@@ -1,0 +1,104 @@
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-content-container {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.dashboard-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-content-search {
+    flex: 1;
+}
+
+.dashboard-content-input {
+    width: 100%;
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.post-imageee {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+.dashboard-content-footer {
+    margin-top: 20px;
+}
+
+.pagination {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.active-pagination {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+/* CSS cho nút sửa */
+.edit-button {
+  background-color: #4CAF50; /* Màu nền xanh lá cây */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Kích thước nút */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #45a049; /* Màu nền xanh lá cây khi di chuột qua */
+}
+
+/* CSS cho nút xóa */
+.delete-button {
+  background-color: #f44336; /* Màu nền đỏ */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Kích thước nút */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Màu nền đỏ khi di chuột qua */
+}
