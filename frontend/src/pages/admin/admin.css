@@ -52,45 +52,11 @@ th {
     margin-top: 20px;
 }
 
-.pagination {
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.active-pagination {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-right: 5px;
-}
-
-/* CSS cho nút sửa */
-.edit-button {
-  background-color: #4CAF50; /* Màu nền xanh lá cây */
-  border: none;
-  color: white;
-  padding: 10px 20px; /* Kích thước nút */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.edit-button:hover {
-  background-color: #45a049; /* Màu nền xanh lá cây khi di chuột qua */
-}
-
-/* CSS cho nút xóa */
 .delete-button {
-  background-color: #f44336; /* Màu nền đỏ */
+  background-color: #f44336; 
   border: none;
   color: white;
-  padding: 10px 20px; /* Kích thước nút */
+  padding: 10px 20px; 
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -100,5 +66,5 @@ th {
 }
 
 .delete-button:hover {
-  background-color: #d32f2f; /* Màu nền đỏ khi di chuột qua */
+  background-color: #d32f2f; 
 }

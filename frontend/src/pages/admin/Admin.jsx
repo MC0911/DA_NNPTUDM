@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import DashboardHeader from '../../components/DashboardHeader';
-import { calculateRange } from '../../utils/table-pagination';
 import { Link } from "react-router-dom"
 import './admin.css';
 
 export const Admin = () => {
-    const [search] = useState('');
     const [posts, setPosts] = useState([]);
-    const [page, setPage] = useState(1);
-    const [pagination, setPagination] = useState([]);
     const PublicFlo = "http://localhost:5000/images/"
 
     useEffect(() => {
         fetchPosts();
     }, []);
 
-    useEffect(() => {
-        setPagination(calculateRange(posts, 5));
-    }, [posts, search]);
 
     const fetchPosts = async () => {
         try {
@@ -27,10 +20,6 @@ export const Admin = () => {
         } catch (error) {
             console.error('Error fetching posts:', error);
         }
-    };
-
-    const handleChangePage = (newPage) => {
-        setPage(newPage);
     };
 
     const handleDelete = async (postId) => {
@@ -62,6 +51,7 @@ export const Admin = () => {
                         <tr>
                             <th>Hình ảnh</th>
                             <th>Tiêu đề</th>
+                            <th>Nội dung</th>
                             <th>Tác giả</th>
                             <th>Action</th>
                         </tr>
@@ -71,6 +61,7 @@ export const Admin = () => {
                             <tr key={index}>
                                 <td><img src={PublicFlo + post.photo} alt='' className="post-imageee" /></td>
                                 <td>{post.title}</td>
+                                <td>{post.desc.slice(0, 200)}...</td>
                                 <td>{post.username}</td>
                                 <td>
                                     <button className='delete-button' onClick={() => handleDelete(post._id)}>Xóa</button>
@@ -79,18 +70,6 @@ export const Admin = () => {
                         ))}
                     </tbody>
                 </table>
-                {/* Pagination */}
-                <div className='dashboard-content-footer'>
-                    {pagination.map((item, index) => (
-                        <span
-                            key={index}
-                            className={item === page ? 'active-pagination' : 'pagination'}
-                            onClick={() => handleChangePage(item)}
-                        >
-                            {item}
-                        </span>
-                    ))}
-                </div>
             </div>
         </div>
     );

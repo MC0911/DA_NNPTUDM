@@ -1,8 +1,6 @@
 const router = require("express").Router()
 const Post = require("../model/Post")
 
-
-
 //create post
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body)
